@@ -52,10 +52,9 @@ export async function GET(req: Request) {
         },
       }
     }
-
-    const posts = await db.post.findMany({
+ const posts = await db.post.findMany({
       take: parseInt(limit),
-      skip: (parseInt(page) - 1) * parseInt(limit), // skip should start from 0 for page 1
+      skip: (parseInt(page) - 1) * parseInt(limit),
       orderBy: {
         createdAt: 'desc',
       },
