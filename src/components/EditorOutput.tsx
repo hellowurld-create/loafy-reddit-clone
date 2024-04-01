@@ -29,10 +29,9 @@ const renderers = {
 
 const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
         
-  return (
-    <div>
+    return (
+        //ts-ignore
           <Output data={content} className='text-sm pb-6' renderers={renderers} />
-    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import NotFound from "@/components/NotFound"
 import SubscribeLeaveToogle from "@/components/SubscribeLeaveToogle"
+import ToFeedButton from "@/components/ToFeedButton"
 import { buttonVariants } from "@/components/ui/button"
 import { getAuthSession } from "@/lib/auth"
 import { db } from "@/lib/db"
@@ -53,6 +54,7 @@ const Layout = async({ children, params: { slug }, }: {
     <div className="sm:container max-w-7xl mx-auto h-full pt-12">
           <div className="">
               {/* TODO: Back Button  */}
+              <ToFeedButton/>
 
               <div className="grid grid-cols-1 gap-y-4 md:gap-x-4 py-6 md:grid-cols-3 ">
                   <div className="flex col-span-2 flex-col space-y-6">
